@@ -9,24 +9,28 @@
   </head>
   <body class="flex items-center justify-center min-h-screen bg-gray-100 px-4">
     <div
-      class="w-full max-w-md sm:max-w-lg p-4 sm:p-6 bg-white rounded-xl shadow"
+      class="w-full max-w-full sm:max-w-lg p-6 sm:p-8 bg-white rounded-2xl shadow-lg"
     >
-      <h2 class="text-xl sm:text-2xl font-bold text-center mb-4">Sign Up</h2>
+      <!-- Heading -->
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-6">Sign Up</h2>
 
-      <form id="signupForm" class="space-y-3">
+      <form id="signupForm" class="space-y-5">
+        <!-- Full Name -->
         <input
           type="text"
           id="fullName"
           placeholder="Full Name"
           required
-          class="w-full p-2 sm:p-3 border rounded"
+          class="w-full p-4 sm:p-5 border rounded-xl text-base sm:text-lg"
         />
+
+        <!-- Email -->
         <input
           type="email"
           id="email"
           placeholder="Email"
           required
-          class="w-full p-2 sm:p-3 border rounded"
+          class="w-full p-4 sm:p-5 border rounded-xl text-base sm:text-lg"
         />
 
         <!-- Password field with toggle -->
@@ -36,21 +40,26 @@
             id="password"
             placeholder="Password"
             required
-            class="w-full p-2 sm:p-3 border rounded pr-10"
+            class="w-full p-4 sm:p-5 border rounded-xl pr-12 text-base sm:text-lg"
           />
           <button
             type="button"
             id="togglePassword"
-            class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500"
+            class="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-500"
           >
             <i data-lucide="eye-off" id="eyeClosedPass"></i>
             <i data-lucide="eye" id="eyeOpenPass" class="hidden"></i>
           </button>
         </div>
 
-        <p class="text-xs sm:text-sm text-gray-500 mb-2">
-          Password must be at least 8 characters and include uppercase,
-          lowercase, number, and special character.
+        <!-- Password rules -->
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+          Password must be at least
+          <span class="font-medium">8 characters</span> and include
+          <span class="font-medium">uppercase</span>,
+          <span class="font-medium">lowercase</span>,
+          <span class="font-medium">number</span>, and
+          <span class="font-medium">special character</span>.
         </p>
 
         <!-- Confirm password field with toggle -->
@@ -60,32 +69,37 @@
             id="confirmPassword"
             placeholder="Confirm Password"
             required
-            class="w-full p-2 sm:p-3 border rounded pr-10"
+            class="w-full p-4 sm:p-5 border rounded-xl pr-12 text-base sm:text-lg"
           />
           <button
             type="button"
             id="toggleConfirmPassword"
-            class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500"
+            class="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-500"
           >
             <i data-lucide="eye-off" id="eyeClosedConfirm"></i>
             <i data-lucide="eye" id="eyeOpenConfirm" class="hidden"></i>
           </button>
         </div>
 
+        <!-- Button -->
         <button
           type="submit"
-          class="w-full bg-blue-600 text-white py-2 sm:py-3 rounded text-base sm:text-lg"
+          class="w-full bg-blue-600 text-white py-4 sm:py-5 rounded-xl text-lg sm:text-xl font-semibold"
         >
           Sign Up
         </button>
       </form>
 
       <!-- Message section -->
-      <p id="signupMessage" class="mt-3 text-center hidden"></p>
+      <p
+        id="signupMessage"
+        class="mt-6 text-base sm:text-lg text-center hidden"
+      ></p>
 
-      <p class="mt-3 text-xs sm:text-sm text-center">
+      <!-- Link to Sign In -->
+      <p class="mt-4 text-sm sm:text-base text-center">
         Already have an account?
-        <a href="index.html" class="text-blue-500">Sign In</a>
+        <a href="index.html" class="text-blue-600 font-medium">Sign In</a>
       </p>
     </div>
 
